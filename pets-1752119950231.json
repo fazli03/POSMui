@@ -1,0 +1,332 @@
+[
+    {
+        "color": "green",
+        "type": "snake",
+        "size": "nano",
+        "name": "Snivy"
+    },
+    {
+        "color": "yellow",
+        "type": "zappy",
+        "size": "nano",
+        "name": "Big Z"
+    },
+    {
+        "color": "yellow",
+        "type": "rubber-duck",
+        "size": "nano",
+        "name": "Molly"
+    },
+    {
+        "color": "paint brown",
+        "type": "horse",
+        "size": "nano",
+        "name": "Buddy"
+    },
+    {
+        "color": "green",
+        "type": "deno",
+        "size": "nano",
+        "name": "Dino"
+    },
+    {
+        "color": "gray",
+        "type": "cockatiel",
+        "size": "nano",
+        "name": "Lola"
+    },
+    {
+        "color": "white",
+        "type": "chicken",
+        "size": "nano",
+        "name": "Pip"
+    },
+    {
+        "color": "gray",
+        "type": "rat",
+        "size": "nano",
+        "name": "Rosie"
+    },
+    {
+        "color": "green",
+        "type": "deno",
+        "size": "nano",
+        "name": "Herby"
+    },
+    {
+        "color": "green",
+        "type": "turtle",
+        "size": "nano",
+        "name": "Sherlock"
+    },
+    {
+        "color": "gray",
+        "type": "rocky",
+        "size": "nano",
+        "name": "Boulder"
+    },
+    {
+        "color": "black",
+        "type": "panda",
+        "size": "nano",
+        "name": "Winnie"
+    },
+    {
+        "color": "yellow",
+        "type": "zappy",
+        "size": "nano",
+        "name": "Zappy"
+    },
+    {
+        "color": "yellow",
+        "type": "rubber-duck",
+        "size": "nano",
+        "name": "Lucy"
+    },
+    {
+        "color": "white",
+        "type": "fox",
+        "size": "nano",
+        "name": "Flynn"
+    },
+    {
+        "color": "gray",
+        "type": "rocky",
+        "size": "nano",
+        "name": "Rocky III"
+    },
+    {
+        "color": "gray",
+        "type": "totoro",
+        "size": "nano",
+        "name": "Oscar"
+    },
+    {
+        "color": "black",
+        "type": "panda",
+        "size": "nano",
+        "name": "Hana"
+    },
+    {
+        "color": "yellow",
+        "type": "rubber-duck",
+        "size": "nano",
+        "name": "Quack Sparrow"
+    },
+    {
+        "color": "gray",
+        "type": "cockatiel",
+        "size": "nano",
+        "name": "Baquack Obama"
+    },
+    {
+        "color": "gray",
+        "type": "rat",
+        "size": "nano",
+        "name": "Loki"
+    },
+    {
+        "color": "green",
+        "type": "deno",
+        "size": "nano",
+        "name": "Littlefoot"
+    },
+    {
+        "color": "black",
+        "type": "panda",
+        "size": "nano",
+        "name": "Teddy"
+    },
+    {
+        "color": "gray",
+        "type": "rat",
+        "size": "nano",
+        "name": "Coco"
+    },
+    {
+        "color": "gray",
+        "type": "cockatiel",
+        "size": "nano",
+        "name": "Donna"
+    },
+    {
+        "color": "black",
+        "type": "clippy",
+        "size": "nano",
+        "name": "Oscar"
+    },
+    {
+        "color": "white",
+        "type": "chicken",
+        "size": "nano",
+        "name": "Cotton"
+    },
+    {
+        "color": "yellow",
+        "type": "rubber-duck",
+        "size": "nano",
+        "name": "Mrs Fluffs"
+    },
+    {
+        "color": "akita",
+        "type": "dog",
+        "size": "nano",
+        "name": "Leo"
+    },
+    {
+        "color": "akita",
+        "type": "dog",
+        "size": "nano",
+        "name": "Pepper"
+    },
+    {
+        "color": "black",
+        "type": "panda",
+        "size": "nano",
+        "name": "Tofu"
+    },
+    {
+        "color": "magical",
+        "type": "horse",
+        "size": "nano",
+        "name": "Tony the Pony"
+    },
+    {
+        "color": "green",
+        "type": "deno",
+        "size": "nano",
+        "name": "Littlefoot"
+    },
+    {
+        "color": "white",
+        "type": "chicken",
+        "size": "nano",
+        "name": "Hen Solo"
+    },
+    {
+        "color": "gray",
+        "type": "rocky",
+        "size": "nano",
+        "name": "Onix"
+    },
+    {
+        "color": "green",
+        "type": "turtle",
+        "size": "nano",
+        "name": "Koopa"
+    },
+    {
+        "color": "brown",
+        "type": "dog",
+        "size": "nano",
+        "name": "Gus"
+    },
+    {
+        "color": "yellow",
+        "type": "rubber-duck",
+        "size": "nano",
+        "name": "Eggspresso"
+    },
+    {
+        "color": "white",
+        "type": "rat",
+        "size": "nano",
+        "name": "Ginger"
+    },
+    {
+        "color": "green",
+        "type": "clippy",
+        "size": "nano",
+        "name": "Molly"
+    },
+    {
+        "color": "socks beige",
+        "type": "horse",
+        "size": "nano",
+        "name": "Tornado"
+    },
+    {
+        "color": "white",
+        "type": "fox",
+        "size": "nano",
+        "name": "Felix"
+    },
+    {
+        "color": "socks brown",
+        "type": "horse",
+        "size": "nano",
+        "name": "Porkpie"
+    },
+    {
+        "color": "black",
+        "type": "panda",
+        "size": "nano",
+        "name": "Teddy"
+    },
+    {
+        "color": "white",
+        "type": "rat",
+        "size": "nano",
+        "name": "Nala"
+    },
+    {
+        "color": "yellow",
+        "type": "zappy",
+        "size": "nano",
+        "name": "Zippy"
+    },
+    {
+        "color": "gray",
+        "type": "totoro",
+        "size": "nano",
+        "name": "Coco"
+    },
+    {
+        "color": "green",
+        "type": "deno",
+        "size": "nano",
+        "name": "Dee"
+    },
+    {
+        "color": "white",
+        "type": "chicken",
+        "size": "nano",
+        "name": "Mirabel"
+    },
+    {
+        "color": "white",
+        "type": "bunny",
+        "size": "nano",
+        "name": "Bella"
+    },
+    {
+        "color": "brown",
+        "type": "snail",
+        "size": "nano",
+        "name": "Taggy"
+    },
+    {
+        "color": "yellow",
+        "type": "rubber-duck",
+        "size": "nano",
+        "name": "Oscar"
+    },
+    {
+        "color": "red",
+        "type": "dog",
+        "size": "nano",
+        "name": "Jasper"
+    },
+    {
+        "color": "yellow",
+        "type": "zappy",
+        "size": "nano",
+        "name": "Zappy"
+    },
+    {
+        "color": "white",
+        "type": "cat",
+        "size": "nano",
+        "name": "Millie"
+    }
+]

@@ -1,0 +1,361 @@
+.cart-header {
+    position: relative;
+    padding: 15px 20px;
+    background-color: #ffffff;
+    border-bottom: 1px solid #e2e8f0;
+    display: flex;
+    justify-content: center; /* pusatkan konten */
+    align-items: center;
+}
+
+.cart-header h2 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #ffffff;
+    padding: 2px 15px;
+    background-color: #FE5D26;
+    border-radius: 15px;
+    margin: 0;
+}
+
+.back-button {
+    position: absolute;
+    left: 20px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #ffffff;
+    padding: 2px 8px;
+    background-color: #FE5D26;
+    border-radius: 50%;
+    margin: 0;
+    cursor: pointer;
+    
+}
+
+.cart-container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 0 16px;
+    padding-bottom: 100px;
+}
+
+.cart-item {
+    background: white;
+    border-radius: 12px 12px  0 0 ;
+    padding: 10px 16px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    overflow: hidden;
+    position: relative;
+}
+.cart-item-note {
+    background: #f5f5f5;
+    border-radius: 0 0 12px 12px;
+    padding: 8px 16px;
+    margin-bottom: 12px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    width: 100%;
+}
+
+.cart-item-note form {
+    width: 100%;
+}
+
+.cart-item-note textarea {
+    width: 100%;
+    box-sizing: border-box;
+    resize: none;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 6px 10px;
+    font-size: 14px;
+    font-family: inherit;
+    outline: none;
+    transition: border-color 0.2s ease;
+}
+
+
+.cart-item-note textarea:focus {
+    border-color: #888;
+}
+
+
+.item-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex: 1;
+}
+
+.item-image {
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.item-info {
+    flex: 1;
+}
+
+.item-name {
+    font-weight: 600;
+    color: #2d3748;
+    margin-bottom: 4px;
+}
+
+.item-qty-badge-wrapper {
+    margin: 4px 0;
+}
+
+.item-qty-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #FFB823;
+    color: white;
+    font-size: 13px;
+    font-weight: 600;
+    width: 25px;
+    height: 25px;
+    border-radius: 30%;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+.item-subtotal {
+    color: #4a5568;
+    font-size: 14px;
+}
+
+.item-right {
+    display: flex;
+    flex-direction: column; /* penting untuk baris vertikal */
+    gap: 6px; /* beri jarak antar form */
+    position: relative;
+    align-items: end; /* atau center tergantung kebutuhan */
+}
+
+
+.cart-empty-message i {
+    display: block;
+    color: #ccc;
+}
+
+.cart-empty-message p {
+    margin-top: 8px;
+    font-size: 1.1rem;
+}
+
+
+.quantity-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+}
+
+
+.qty-btn {
+    width: auto;
+    height: 23px;
+    color: white;
+    border: 1px solid #ff7a4e;
+    background: #ff7a4e;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-size: 12px;
+    font-weight: 600;
+    gap: 4px;
+    padding-right: 5px;
+}
+
+.qty-btn.decreaseQty {
+    
+    padding-right: 8px;
+}
+
+
+.qty-btn i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    padding: 0 3px;
+    height: 23px;
+    width: 23px;
+    background-color: white;
+    color: #ff7a4e;
+    box-shadow: inset 0 0 0 2px #ff7a4e;
+}
+
+
+.qty-btn:hover {
+    background: #f96736;
+    border-color: #fc7142;
+}
+
+
+.quantityInput::-webkit-outer-spin-button,
+.quantityInput::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.remove-btn {
+    background: #fed7d7;
+    padding-right: 9px;
+    font-weight: 600;
+    border: none;
+    width: auto;
+    height: 23px;
+    border-radius: 6px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+    color: #e53e3e;
+    gap: 6px;
+}
+
+.remove-btn:hover {
+    background: #feb2b2;
+    transform: scale(1.05);
+}
+
+.remove-btn i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    padding: 0 3px;
+    height: 23px;
+    width: 23px;
+    background-color: white;
+    color: #e53e3e;
+    box-shadow: inset 0 0 0 2px #e53e3e;
+}
+
+.trash-icon {
+    width: 16px;
+    height: 16px;
+}
+
+.updateBtn {
+    display: none;
+}
+
+
+
+
+/* Fixed Checkout Section */
+.checkout-fixed {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: white;
+    padding: 20px;
+    box-shadow: 0 -4px 12px rgba(0,0,0,0.15);
+    border-top: 1px solid #e2e8f0;
+}
+
+.checkout-content {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.total-section {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.total-label {
+    font-size: 14px;
+    color: #718096;
+}
+
+.total-amount {
+    font-size: 24px;
+    font-weight: 700;
+    color: #2d3748;
+}
+
+.checkout-btn {
+    background: #FE5D26;
+    color: white;
+    border: none;
+    padding: 16px 32px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+    text-decoration: none;
+}
+
+.checkout-btn:hover {
+    background: #ff7a4e;
+    transform: translateY(-1px);
+}
+
+@media (max-width: 480px) {
+  .checkout-fixed {
+    padding: 16px;
+  }
+
+  .checkout-content {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+    text-align: center;
+  }
+
+  .total-section {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .total-label {
+    font-size: 13px;
+  }
+
+  .total-amount {
+    font-size: 20px;
+  }
+
+  .checkout-btn {
+    width: 100%;
+    padding: 14px;
+    font-size: 15px;
+  }
+}
+
+
+/* Overlay untuk menutup controls saat klik di luar */
+.controls-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: transparent;
+    z-index: 0;
+    display: none;
+}
+
+.controls-overlay.active {
+    display: block;
+}

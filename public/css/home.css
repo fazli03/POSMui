@@ -1,0 +1,341 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: white;
+    min-height: 100vh;
+    color: #4a2c17;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Desktop Styles */
+.header-section {
+    background: linear-gradient(135deg, #ff6b35 0%, #ff8c42 50%, #ff8c42 100%);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 30px;
+    margin-bottom: 40px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.home {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #fff;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.main-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: start;
+}
+
+.left-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;  
+    gap: 60px;
+}
+
+.mui-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20%;
+    padding: 100px;
+    max-width: 500px;
+    max-height: 400px;
+    overflow: hidden;
+    background-color: #ff8c42;
+    
+}
+
+.logo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+
+@keyframes shimmer {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.right-column {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+}
+
+.greeting {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: orange;
+    text-align: center;
+    padding: 25px;
+    border-radius: 15px;
+}
+
+.order-options {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+
+.order-card {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    padding: 15px 20px;
+    text-align: center;
+    text-decoration: none;
+    color: #4a2c17;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    border: 2px solid transparent;
+}
+
+.order-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* === WARNA KHUSUS UNTUK PICKUP === */
+.pickup-card {
+    background: linear-gradient(135deg, #ffe9d6, #fff3e0);
+    border-color: #ffb74d;
+}
+
+.pickup-card:hover {
+    background: linear-gradient(135deg, #ffecb3, #ffe0b2);
+    border-color: #ffa726;
+}
+
+/* === WARNA KHUSUS UNTUK DELIVERY === */
+.delivery-card {
+    background: linear-gradient(135deg, #ffe0e0, #fff0f0);
+    border-color: #ef5350;
+}
+
+.delivery-card:hover {
+    background: linear-gradient(135deg, #ffcdd2, #ffebee);
+    border-color: #e53935;
+}
+
+.order-card h4 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #ff4500;
+    font-weight: bold;
+}
+
+.order-icon {
+    font-size: 3rem;
+    color: #ff6b35;
+    margin-bottom: 15px;
+}
+.order-card p {
+    font-size: 1rem;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    color: #ff4500;
+    font-weight: bold;
+}
+
+.perlu-bantuan-box {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    border: 2px solid rgba(255, 107, 53, 0.3);
+}
+
+.judul {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #ff4500;
+    margin-bottom: 12px;
+}
+
+.subjudul {
+    font-size: 1.3rem;
+    color: #ff6b35;
+    margin-bottom: 18px;
+    font-weight: 600;
+}
+
+.kontak {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    font-size: 1.2rem;
+}
+
+.kontak i {
+    color: #ff4500;
+    font-size: 1.8rem;
+}
+
+.kontak a {
+    color: #ff6b35;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.kontak a:hover {
+    color: #ff4500;
+}
+
+/* Mobile Styles - 480px and below */
+@media (max-width: 480px) {
+    .container {
+        padding: 0 20px;
+    }
+
+    .header-section {
+        padding: 10px;
+        margin-bottom: 15px;
+        border-radius: 0 0 25px 25px;
+       
+    }
+
+    .home {
+        font-size: 30px;
+        font-weight: 700;
+       
+    }
+
+    .main-content {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 20px;
+        align-items: start;
+    }
+
+    .left-column {
+        gap: 30px; /* Lebih rapat di layar kecil */
+        padding: 0 15px;
+        border: none; /* Opsional: hilangkan border di mobile */
+    }
+
+    .mui-logo {
+        padding: 50px;
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+    }
+
+    .logo {
+        width: 150%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .right-column {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .greeting {
+        margin: 0px;
+        font-size: 22px;
+        font-weight: 700;
+        text-align: center;
+        padding: 0;
+        border-radius: 0;
+    }
+
+    .order-options {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+
+    .order-card {
+        border-radius: 15px;
+        padding: 15px 20px;
+        text-align: center;
+        text-decoration: none;
+        border: 2px solid transparent;
+    }
+
+    
+    .order-card h4 {
+        font-size: 1.3rem;
+        margin-bottom: 15px;
+        color: #ff4500;
+        font-weight: bold;
+    }
+
+    .order-icon {
+        font-size: 2.5rem;
+        color: #ff6b35;
+        margin-bottom: 10px;
+    }
+
+    .perlu-bantuan-box {
+        background: rgba(255, 255, 255, 0.9);
+        border-radius: 15px;
+        padding: 25px;
+        text-align: center;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+        border: 2px solid rgba(255, 107, 53, 0.3);
+    }
+
+    .judul {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: #ff4500;
+        margin-bottom: 10px;
+    }
+
+    .subjudul {
+        font-size: 1.1rem;
+        color: #ff6b35;
+        margin-bottom: 15px;
+        font-weight: 600;
+    }
+
+    .kontak {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        font-size: 1.1rem;
+    }
+
+    .kontak i {
+        color: #ff4500;
+        font-size: 1.5rem;
+    }
+
+    .kontak a {
+        color: #ff6b35;
+        text-decoration: none;
+        font-weight: bold;
+        transition: color 0.3s ease;
+    }
+
+    .kontak a:hover {
+        color: #ff4500;
+    }
+}
+    

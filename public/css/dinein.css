@@ -1,0 +1,553 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Inter", sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    padding-bottom: 0;
+}
+/* Header sticky + layouting */
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: #ffffff;
+    padding: 20px 200px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    border-bottom: 1px solid #f0f0f0;
+
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+/* Navigation Styles */
+.category-nav {
+    flex: 1;
+    overflow: hidden; /* Penting untuk mobile scroll */
+}
+
+.category-form {
+    display: flex;
+    gap: 12px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding-bottom: 8px;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch; /* Smooth scroll di iOS */
+}
+
+.nav-item-btn {
+    min-width: 120px;
+    background: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 12px;
+    padding: 12px 16px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    flex-shrink: 0; /* Mencegah shrink */
+    white-space: nowrap; /* Mencegah text wrap */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    font-family: inherit;
+}
+
+.nav-item-btn:hover {
+    background: #f1f3f4;
+    border-color: #dee2e6;
+    transform: translateY(-1px);
+}
+
+.nav-item-btn.active {
+    background: #2c3e50;
+    color: white;
+    border-color: #2c3e50;
+}
+
+.nav-icon {
+    font-size: 20px;
+}
+
+.nav-text {
+    font-size: 13px;
+    font-weight: 500;
+    text-align: center;
+}
+
+.nav-count {
+    font-size: 11px;
+    opacity: 0.7;
+    font-weight: 400;
+}
+
+.nav-item-btn.active .nav-count {
+    opacity: 0.9;
+}
+
+/* Search Styles */
+.search-container {
+    position: relative;
+    min-width: 280px;
+    max-width: 360px;
+}
+
+.search-input {
+    width: 100%;
+    padding: 14px 50px 14px 18px;
+    border: 1px solid #ccc;
+    border-radius: 30px;
+    background: #fdfdfd;
+    font-size: 15px;
+    color: #333;
+    transition: border 0.2s ease, box-shadow 0.2s ease;
+}
+
+.search-input:focus {
+    border-color: #333;
+    box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.08);
+    outline: none;
+}
+
+.search-input::placeholder {
+    color: #888;
+}
+
+.search-btn {
+    position: absolute;
+    top: 50%;
+    right: 14px;
+    transform: translateY(-50%);
+    background: #333;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    padding: 7px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.search-btn:hover {
+    background: #000;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        gap: 20px;
+        padding: 16px;
+    }
+
+    .category-nav {
+        width: 100%;
+        margin: 0 -16px; /* Extend ke edge */
+        padding: 0 16px;
+    }
+
+    .category-form {
+        gap: 10px;
+        padding-bottom: 10px;
+        padding-right: 16px; /* Extra space di kanan */
+    }
+
+    .nav-item-btn {
+        min-width: 110px;
+        padding: 10px 12px;
+        font-size: 12px;
+    }
+
+    .nav-text {
+        font-size: 12px;
+    }
+
+    .nav-count {
+        font-size: 10px;
+    }
+
+    .search-container {
+        width: 100%;
+        max-width: none;
+    }
+}
+
+/* Scrollbar styling - lebih visible di mobile */
+.category-form::-webkit-scrollbar {
+    height: 6px;
+}
+
+.category-form::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.05);
+    border-radius: 3px;
+}
+
+.category-form::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 3px;
+}
+
+.category-form::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 0, 0, 0.3);
+}
+
+/* Scroll indicator untuk mobile */
+@media (max-width: 768px) {
+    .category-nav::after {
+        content: "";
+        position: absolute;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        width: 20px;
+        background: linear-gradient(
+            to left,
+            rgba(255, 255, 255, 0.8),
+            transparent
+        );
+        pointer-events: none;
+        z-index: 1;
+    }
+
+    .category-nav {
+        position: relative;
+    }
+}
+
+/* Menu Grid Styles */
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.menu-item {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    margin: 2px 10px 2px 12px;
+}
+
+.menu-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.menu-item.disabled {
+    pointer-events: none;
+    position: relative;
+}
+
+.item-unavailable {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: rgba(255, 0, 0, 0.75);
+    padding: 5px 10px;
+    border-radius: 0 10px 0 0;
+    color: #fff;
+    font-size: 13px;
+    font-weight: 600;
+    z-index: 1;
+}
+
+.img-container {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    position: relative; /* WAJIB untuk absolute child bekerja */
+    border-radius: 10px 10px 0 0;
+}
+
+.item-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    margin: 0;
+}
+
+.item-info {
+    padding: 12px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.item-name {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: #333;
+    line-height: 1.2;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.buttom-side {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.item-category {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #555;
+    background-color: #f3f3f3;
+    padding: 4px 10px;
+    border-radius: 12px;
+}
+
+.item-price {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #222;
+}
+
+.item-category.sandwich {
+    background: #ffe0b3;
+    color: #cc7a00;
+}
+.item-category.pastry {
+    background: #e1f5fe;
+    color: #0277bd;
+}
+.item-category.donut {
+    background: #fff3e0;
+    color: #f57c00;
+}
+.item-category.cake {
+    background: #fce4ec;
+    color: #c2185b;
+}
+.item-category.bread {
+    background: #e8f5e8;
+    color: #388e3c;
+}
+.item-category.tart {
+    background: #f3e5f5;
+    color: #7b1fa2;
+}
+
+/* Track Order Button Container */
+.bot-btn {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 12px;
+    z-index: 999;
+}
+
+/* Tombol Utama */
+.track-order-btn {
+    background: #fe5d26;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    padding: 10px 18px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(66, 133, 244, 0.3);
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    position: relative;
+    justify-content: center;
+}
+
+/* Hover effect */
+.track-order-btn:hover {
+    background: #ff7a4e;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(66, 133, 244, 0.4);
+}
+
+/* Icon dalam tombol */
+.track-icon {
+    font-size: 18px;
+}
+
+/* Jumlah Order */
+.order-count {
+    border: 2px solid #fe5d26;
+    background: white;
+    color: #fe5d26;
+    border-radius: 50%;
+    width: 26px;
+    height: 26px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: bold;
+    margin-left: 8px;
+}
+
+/* Responsif */
+@media (max-width: 480px) {
+    .track-order-btn {
+        padding: 10px 14px;
+        font-size: 14px;
+    }
+
+    .track-icon {
+        font-size: 16px;
+        margin-right: 4px;
+    }
+
+    .order-count {
+        width: 22px;
+        height: 22px;
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .menu-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .container {
+        padding: 12px;
+    }
+
+    .nav-item {
+        min-width: 80px;
+        padding: 10px 6px;
+    }
+
+    .nav-text {
+        font-size: 12px;
+    }
+
+    .nav-count {
+        font-size: 10px;
+    }
+
+    .menu-grid {
+        gap: 8px;
+    }
+
+    .img-container {
+        height: 110px; /* atau tinggi tetap sesuai desain kamu */
+    }
+
+    /* .item-image {
+        height: 100px;
+    } */
+
+    .item-info {
+        padding: 8px;
+    }
+
+    .item-name {
+        font-size: 12px;
+        margin-bottom: 4px;
+    }
+
+    .item-category {
+        font-size: 9px;
+        padding: 2px 6px;
+        margin-bottom: 6px;
+    }
+
+    .item-price {
+        font-size: 13px;
+    }
+}
+
+.toast-error {
+    position: fixed;
+    bottom: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #e53e3e;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-weight: 600;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    z-index: 9999;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+.toast-error.show {
+    opacity: 1;
+}
+.custom-toast {
+    position: fixed;
+    top: 1.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 1rem 1.5rem;
+    border-radius: 8px;
+    color: #000;
+    font-weight: 500;
+    z-index: 9999;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.5s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.custom-toast.show {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* === Warna berdasarkan jenis === */
+.custom-toast.success {
+    background-color: #4dfd76;
+}
+
+.custom-toast.error {
+    background-color: #dc3545;
+    color: white;
+}
+
+.custom-toast.warning {
+    background-color: #ffc107;
+    color: black;
+}
+
+.custom-toast.info {
+    background-color: #17a2b8;
+    color: white;
+}
+
+/* === Responsive Toast === */
+@media (max-width: 576px) {
+    .custom-toast {
+        width: 60%;
+        font-size: 0.9rem;
+        padding: 0.75rem 1rem;
+        border-radius: 50px;
+        text-align: center;
+    }
+}
