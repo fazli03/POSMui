@@ -7,6 +7,7 @@ use Livewire\Livewire;
 uses(\Illuminate\Foundation\Testing\RefreshDatabase::class);
 
 test('confirm password screen can be rendered', function () {
+    /** @var \Tests\TestCase $this */
     $user = User::factory()->create();
 
     $response = $this->actingAs($user)->get('/confirm-password');
@@ -15,6 +16,7 @@ test('confirm password screen can be rendered', function () {
 });
 
 test('password can be confirmed', function () {
+    /** @var \Tests\TestCase $this */
     $user = User::factory()->create();
 
     $this->actingAs($user);
@@ -29,6 +31,7 @@ test('password can be confirmed', function () {
 });
 
 test('password is not confirmed with invalid password', function () {
+    /** @var \Tests\TestCase $this */
     $user = User::factory()->create();
 
     $this->actingAs($user);
